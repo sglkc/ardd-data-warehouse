@@ -14,7 +14,6 @@ services:
       - 5432:${POSTGRES_PORT}
     volumes:
       - pgsql_data:/var/lib/postgresql/data
-      - ./pgsql-multidb.sh:/docker-entrypoint-initdb.d/multidb.sh
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
