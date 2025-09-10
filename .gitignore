@@ -1,0 +1,57 @@
+node_modules
+/.fleet
+/.idea
+/.pnp
+/.husky
+/.unikraft
+.pnp.js
+.DS_Store
+.DS_Store?
+.rollup.cache
+.cache
+.output
+.pnpm/
+.temp/
+.tmp/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*tsbuildinfo
+*.bak
+coverage/
+temp/
+tmp/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+
+# SQLite
+*.sqlite*
+*.sqlite3*
+*.db
+
+# envars
+.env*
+!.env.example
+compose.env*
+!compose.env.example
+
+# python
+__pycache__/
+
+AUDIT.md
+NOTES.md
+TODOS.md
