@@ -91,3 +91,21 @@ By default, the credentials for containerized database should be:
 - Database: data_warehouse
 
 Please refer to your .env file, should you change any of the defaults.
+
+## Metabase
+
+Upon running the `compose up` script, you will have to wait for Metabase to start.
+This process should take a minute, though the logs can be seen with:
+
+```
+docker logs ${PROJECT_NAME}_metabase -f
+```
+
+Adapt `PROJECT_NAME` to your environment variable, by default, it's `au_crashes`.
+
+On first start up, you will be required to create an admin account to access Metabase.
+Follow the process and input anything. On the 4th step, you should pick PostgreSQL and enter the database credentials.
+
+If you use the database locally, you must replace `localhost` with `host.docker.internal`.
+
+![Metabase PostgreSQL setup](./docs/metabase.webp)
