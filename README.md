@@ -5,6 +5,7 @@ Intern project for data warehouse. TODO: more info here
 ## Prerequisites
 
 - [Docker](https://docs.docker.com/engine/install/) for containerization
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) for Python management
 - bash supported environment for scripts
 
 Before running, you must set up environment variables for the project:
@@ -14,6 +15,28 @@ cp .env.example .env
 ```
 
 The variables are ready for development, but it can be customized.
+
+## Python
+
+The project uses uv for Python version and package management, make sure you already had it installed.
+
+- Create virtual env with uv
+
+  ```sh
+  uv venv
+  ```
+
+- Activate virtual env
+
+  ```sh
+  source .venv/bin/activate
+  ```
+
+- Sync Python packages
+
+  ```sh
+  uv sync
+  ```
 
 ## Docker
 
