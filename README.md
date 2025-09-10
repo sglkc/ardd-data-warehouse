@@ -2,6 +2,16 @@
 
 Intern project for data warehouse. TODO: more info here
 
+## Source Data
+
+The project references a data warehouse project from The University of Western Australia:
+
+https://csse-uwa.gitbook.io/data-warehouse-project-1-s1-2025
+
+The dataset for this project are gathered from the Australian Road Deaths Database (ARDD):
+
+https://datahub.roadsafety.gov.au/progress-reporting/monthly-road-deaths
+
 ## Prerequisites
 
 - [Docker](https://docs.docker.com/engine/install/) for containerization
