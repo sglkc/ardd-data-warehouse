@@ -12,6 +12,10 @@ The dataset for this project are gathered from the Australian Road Deaths Databa
 
 https://datahub.roadsafety.gov.au/progress-reporting/monthly-road-deaths
 
+Other complementing dataset such as `RA_2021_AUST` and `LGA_2021_AUST` are downloaded from:
+
+https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/allocation-files
+
 ## Prerequisites
 
 - [Docker](https://docs.docker.com/engine/install/) for containerization
