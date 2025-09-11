@@ -6,5 +6,15 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "dlt[postgres]>=1.16.0",
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.2",
     "sqlmesh[postgres]>=0.216.0",
 ]
+
+[dependency-groups]
+dev = [
+    "pandas-stubs>=2.3.2.250827",
+]
+
+[tool.pyright]
+typeCheckingMode = "standard"
