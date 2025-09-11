@@ -9,14 +9,14 @@
 			"configuration": {
 				"host": "localhost",
 				"port": "5432",
-				"database": "postgres",
-				"url": "jdbc:postgresql://localhost:5432/postgres",
+				"database": "data_warehouse",
+				"url": "jdbc:postgresql://localhost:5432/data_warehouse",
 				"configurationType": "MANUAL",
 				"home": "/usr/lib/postgresql/17",
 				"type": "dev",
 				"closeIdleConnection": true,
 				"provider-properties": {
-					"@dbeaver-show-non-default-db@": "false"
+					"@dbeaver-show-non-default-db@": "true"
 				},
 				"auth-model": "native"
 			}
