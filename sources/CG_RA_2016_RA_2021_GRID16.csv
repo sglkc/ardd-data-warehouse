@@ -1,0 +1,88 @@
+RA_CODE_2016,RA_NAME_2016,RA_CODE_2021,RA_NAME_2021,RATIO_FROM_TO,INDIV_TO_REGION_QLTY_INDICATOR,OVERALL_QUALITY_INDICATOR,BMOS_NULL_FLAG
+10,Major Cities of Australia,10,Major Cities of Australia,0.9971399,Good,Good,0
+10,Major Cities of Australia,11,Inner Regional Australia,0.0028601,Good,Good,1
+11,Inner Regional Australia,10,Major Cities of Australia,0.0286028,Good,Good,0
+11,Inner Regional Australia,11,Inner Regional Australia,0.9701996,Good,Good,0
+11,Inner Regional Australia,12,Outer Regional Australia,0.0011977,Acceptable,Good,1
+12,Outer Regional Australia,11,Inner Regional Australia,0.1487021,Good,Good,0
+12,Outer Regional Australia,12,Outer Regional Australia,0.8503602,Acceptable,Good,0
+12,Outer Regional Australia,13,Remote Australia,0.0009378,Good,Good,1
+13,Remote Australia,13,Remote Australia,0.9384125,Good,Good,0
+13,Remote Australia,14,Very Remote Australia,0.0615875,Acceptable,Good,0
+14,Very Remote Australia,14,Very Remote Australia,1,Acceptable,Good,0
+15,Migratory - Offshore - Shipping (NSW),15,Migratory - Offshore - Shipping (NSW),1,Good,Good,0
+19,No usual address (NSW),19,No usual address (NSW),1,Good,Good,0
+20,Major Cities of Australia,20,Major Cities of Australia,0.9996301,Good,Good,0
+20,Major Cities of Australia,21,Inner Regional Australia,0.0003699,Good,Good,1
+21,Inner Regional Australia,20,Major Cities of Australia,0.0131148,Good,Good,0
+21,Inner Regional Australia,21,Inner Regional Australia,0.9856259,Good,Good,0
+21,Inner Regional Australia,22,Outer Regional Australia,0.0012593,Good,Good,1
+22,Outer Regional Australia,21,Inner Regional Australia,0.0013341,Good,Good,1
+22,Outer Regional Australia,22,Outer Regional Australia,0.9926964,Good,Good,0
+22,Outer Regional Australia,23,Remote Australia,0.0059695,Poor,Good,1
+23,Remote Australia,22,Outer Regional Australia,0.381876,Good,Good,0
+23,Remote Australia,23,Remote Australia,0.618124,Poor,Good,0
+25,Migratory - Offshore - Shipping (Vic.),25,Migratory - Offshore - Shipping (Vic.),1,Good,Good,0
+29,No usual address (Vic.),29,No usual address (Vic.),1,Good,Good,0
+30,Major Cities of Australia,30,Major Cities of Australia,0.9987607,Good,Good,0
+30,Major Cities of Australia,31,Inner Regional Australia,0.0012393,Good,Good,1
+31,Inner Regional Australia,30,Major Cities of Australia,0.0214634,Good,Good,0
+31,Inner Regional Australia,31,Inner Regional Australia,0.9757786,Good,Good,0
+31,Inner Regional Australia,32,Outer Regional Australia,0.002758,Good,Good,1
+32,Outer Regional Australia,31,Inner Regional Australia,0.0123115,Good,Good,0
+32,Outer Regional Australia,32,Outer Regional Australia,0.9867818,Good,Good,0
+32,Outer Regional Australia,33,Remote Australia,0.0009067,Good,Good,1
+33,Remote Australia,32,Outer Regional Australia,0.0055861,Good,Good,1
+33,Remote Australia,33,Remote Australia,0.9944139,Good,Good,0
+34,Very Remote Australia,33,Remote Australia,0.0004336,Good,Good,1
+34,Very Remote Australia,34,Very Remote Australia,0.9995664,Good,Good,0
+35,Migratory - Offshore - Shipping (Qld),35,Migratory - Offshore - Shipping (Qld),1,Good,Good,0
+39,No usual address (Qld),39,No usual address (Qld),1,Good,Good,0
+40,Major Cities of Australia,40,Major Cities of Australia,0.9997334,Good,Good,0
+40,Major Cities of Australia,41,Inner Regional Australia,0.0002666,Acceptable,Good,1
+41,Inner Regional Australia,40,Major Cities of Australia,0.1177765,Good,Good,0
+41,Inner Regional Australia,41,Inner Regional Australia,0.7592425,Acceptable,Good,0
+41,Inner Regional Australia,42,Outer Regional Australia,0.1229809,Acceptable,Good,0
+42,Outer Regional Australia,41,Inner Regional Australia,0.0032546,Acceptable,Good,1
+42,Outer Regional Australia,42,Outer Regional Australia,0.9967454,Acceptable,Good,0
+43,Remote Australia,43,Remote Australia,0.9774306,Good,Good,0
+43,Remote Australia,44,Very Remote Australia,0.0225694,Good,Good,0
+44,Very Remote Australia,44,Very Remote Australia,1,Good,Good,0
+45,Migratory - Offshore - Shipping (SA),45,Migratory - Offshore - Shipping (SA),1,Good,Good,0
+49,No usual address (SA),49,No usual address (SA),1,Good,Good,0
+50,Major Cities of Australia,50,Major Cities of Australia,0.9996796,Good,Good,0
+50,Major Cities of Australia,51,Inner Regional Australia,0.0003204,Good,Good,1
+51,Inner Regional Australia,50,Major Cities of Australia,0.002113,Good,Good,1
+51,Inner Regional Australia,51,Inner Regional Australia,0.9938702,Good,Good,0
+51,Inner Regional Australia,52,Outer Regional Australia,0.0040168,Good,Good,1
+52,Outer Regional Australia,51,Inner Regional Australia,0.0034614,Good,Good,1
+52,Outer Regional Australia,52,Outer Regional Australia,0.9868162,Good,Good,0
+52,Outer Regional Australia,53,Remote Australia,0.0097224,Good,Good,1
+53,Remote Australia,53,Remote Australia,0.9999999,Good,Good,0
+53,Remote Australia,54,Very Remote Australia,1.00E-07,Good,Good,1
+54,Very Remote Australia,54,Very Remote Australia,1,Good,Good,0
+55,Migratory - Offshore - Shipping (WA),55,Migratory - Offshore - Shipping (WA),1,Good,Good,0
+59,No usual address (WA),59,No usual address (WA),1,Good,Good,0
+61,Inner Regional Australia,61,Inner Regional Australia,0.9110246,Good,Good,0
+61,Inner Regional Australia,62,Outer Regional Australia,0.0889754,Acceptable,Good,0
+62,Outer Regional Australia,62,Outer Regional Australia,0.9999999,Acceptable,Good,0
+62,Outer Regional Australia,63,Remote Australia,1.00E-07,Good,Good,1
+63,Remote Australia,63,Remote Australia,1,Good,Good,0
+64,Very Remote Australia,64,Very Remote Australia,1,Good,Good,0
+65,Migratory - Offshore - Shipping (Tas.),65,Migratory - Offshore - Shipping (Tas.),1,Good,Good,0
+69,No usual address (Tas.),69,No usual address (Tas.),1,Good,Good,0
+72,Outer Regional Australia,72,Outer Regional Australia,1,Good,Good,0
+73,Remote Australia,73,Remote Australia,1,Good,Good,0
+74,Very Remote Australia,73,Remote Australia,0.0508544,Good,Good,0
+74,Very Remote Australia,74,Very Remote Australia,0.9491456,Good,Good,0
+75,Migratory - Offshore - Shipping (NT),75,Migratory - Offshore - Shipping (NT),1,Good,Good,0
+79,No usual address (NT),79,No usual address (NT),1,Good,Good,0
+80,Major Cities of Australia,80,Major Cities of Australia,1,Good,Good,0
+81,Inner Regional Australia,81,Inner Regional Australia,1,Good,Good,0
+85,Migratory - Offshore - Shipping (ACT),85,Migratory - Offshore - Shipping (ACT),1,Good,Good,0
+89,No usual address (ACT),89,No usual address (ACT),1,Good,Good,0
+91,Inner Regional Australia,91,Inner Regional Australia,1,Good,Good,0
+94,Very Remote Australia,94,Very Remote Australia,1,Good,Good,0
+95,Migratory - Offshore - Shipping (OT),95,Migratory - Offshore - Shipping (OT),1,Good,Good,0
+99,No usual address (OT),99,No usual address (OT),1,Good,Good,0
+,,ZZ,Outside Australia,,NA,Good,3
