@@ -3,7 +3,7 @@ import sys
 from dotenv import load_dotenv
 import dlt
 from dlt.destinations import postgres
-from dlt.sources.filesystem import filesystem
+from dlt.sources.filesystem import filesystem, read_csv
 
 import utils
 
@@ -16,39 +16,64 @@ pg_password = os.getenv("POSTGRES_PASSWORD", "")
 pg_database = os.getenv("POSTGRES_DB", "")
 pg_connection = f"postgresql://{pg_user}:{pg_password}@{pg_host}:{pg_port}/{pg_database}?sslmode=disable"
 
-from typing import TypedDict, Dict, Any
+from typing import NotRequired, TypedDict, Dict, Any
+
+class ExcelConfig(TypedDict):
+    sheet: str
+    kwargs: Dict[str, Any]
 
 class SourceConfig(TypedDict):
     filename: str
-    sheet: str
     table: str
-    kwargs: Dict[str, Any]
+    excel: NotRequired[ExcelConfig]
 
 sources: Dict[str, SourceConfig] = {
     "fatalities-jun": {
         "filename": "bitre_fatalities_jun2025.xlsx",
-        "sheet": "BITRE_Fatality",
         "table": "fatalities",
-        "kwargs": {
-            "header": 4
+        "excel": {
+            "sheet": "BITRE_Fatality",
+            "kwargs": {
+                "header": 4
+            }
         }
     },
     "fatalities-jul": {
         "filename": "bitre_fatalities_jul2025.xlsx",
-        "sheet": "BITRE_Fatality",
         "table": "fatalities",
-        "kwargs": {
-            "header": 4
+        "excel": {
+            "sheet": "BITRE_Fatality",
+            "kwargs": {
+                "header": 4
+            }
         }
+    },
+    "lga": {
+        "filename": "CG_LGA_2020_LGA_2021.csv",
+        "table": "local_government_areas",
+    },
+    "ra": {
+        "filename": "CG_RA_2016_RA_2021_GRID16.csv",
+        "table": "remoteness_areas",
+    },
+    "sa4": {
+        "filename": "CG_SA4_2016_SA4_2021.csv",
+        "table": "statistical_areas_level_4",
     },
 }
 
 def load_fatalities(name: str, data: SourceConfig) -> None:
     print(f"parsing {name} from {data['filename']}...")
+
+    read_func = read_csv
+
+    if "excel" in data:
+        read_func = utils.read_excel(data['excel']['sheet'], **data['excel']['kwargs'])
+
     source = filesystem(
         bucket_url="../sources",
         file_glob=data['filename'],
-    ) | utils.read_excel(data['sheet'], **data['kwargs'])
+    ) | read_func
 
     pipeline = dlt.pipeline(
         pipeline_name=f"load_{data['table']}_bronze",
