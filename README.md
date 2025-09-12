@@ -12,7 +12,7 @@ The dataset for this project are gathered from the Australian Road Deaths Databa
 
 https://datahub.roadsafety.gov.au/progress-reporting/monthly-road-deaths
 
-Other complementing dataset such as `RA_2021_AUST` and `LGA_2021_AUST` are downloaded from:
+Other complementing dataset are downloaded from:
 
 https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/allocation-files
 
@@ -113,3 +113,13 @@ Follow the process and input anything. On the 4th step, you should pick PostgreS
 If you use the database locally, you must replace `localhost` with `host.docker.internal`.
 
 ![Metabase PostgreSQL setup](./docs/metabase.webp)
+
+## dlt
+
+The project utilizes dlt (data load tool) to extract file datasets into the data warehouse bronze layer.
+
+To load the source datasets into the data warehouse, run the following script with additional source name:
+
+```sh
+./dlt.sh <all | fatalities-jun | fatalities-jul | lga | ra | sa4>
+```
