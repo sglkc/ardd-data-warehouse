@@ -25,6 +25,7 @@ class ExcelConfig(TypedDict):
 class SourceConfig(TypedDict):
     filename: str
     table: str
+    csv: NotRequired[Any]
     excel: NotRequired[ExcelConfig]
 
 sources: Dict[str, SourceConfig] = {
@@ -60,12 +61,33 @@ sources: Dict[str, SourceConfig] = {
         "filename": "CG_SA4_2016_SA4_2021.csv",
         "table": "statistical_areas_level_4",
     },
+    "dwellings": {
+        "filename": "LGA (count of dwellings).csv",
+        "table": "count_of_dwellings",
+        "csv": {
+            "header": 6,
+            "usecols": [0, 1],
+        },
+    },
+    "population": {
+        "filename": "Population estimates by LGA, Significant Urban Area, Remoteness Area, Commonwealth Electoral Division and State Electoral Division, 2001 to 2023.xlsx",
+        "table": "population_estimates",
+        "excel": {
+            "sheet": "Table 1",
+            "kwargs": {
+                "header": 6 # should be 5, 6
+            },
+        },
+    },
 }
 
 def load_fatalities(name: str, data: SourceConfig) -> None:
     print(f"parsing {name} from {data['filename']}...")
 
-    read_func = read_csv
+    read_func = read_csv()
+
+    if "csv" in data:
+        read_func = read_csv(1000, **data['csv'])
 
     if "excel" in data:
         read_func = utils.read_excel(data['excel']['sheet'], **data['excel']['kwargs'])
@@ -80,6 +102,10 @@ def load_fatalities(name: str, data: SourceConfig) -> None:
         destination=postgres(credentials=pg_connection),
         # schema name in pgsql to insert into
         dataset_name="bronze",
+    )
+
+    _ = source.apply_hints(
+        write_disposition="replace",
     )
 
     info = pipeline.run(source.with_name(data['table']))

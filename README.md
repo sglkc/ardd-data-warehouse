@@ -121,5 +121,5 @@ The project utilizes dlt (data load tool) to extract file datasets into the data
 To load the source datasets into the data warehouse, run the following script with additional source name:
 
 ```sh
-./dlt.sh <all | fatalities-jun | fatalities-jul | lga | ra | sa4>
+./dlt.sh < all | fatalities-jun | fatalities-jul | lga | ra | sa4 | dwellings | population >
 ```
