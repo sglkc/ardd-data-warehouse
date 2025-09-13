@@ -1,1 +1,1 @@
-{"resources":{"Scripts/data-exploration.sql":{"default-schema":"bronze","default-datasource":"postgres-jdbc-19933fe3d83-548b67fb747aad94","default-catalog":"data_warehouse"}}}
+{"resources":{"Scripts/data-exploration.sql":{"default-schema":"bronze","default-datasource":"postgres-jdbc-19933fe3d83-548b67fb747aad94","default-catalog":"data_warehouse"},"Scripts/fatalities-eda.sql":{"default-datasource":"postgres-jdbc-19933fe3d83-548b67fb747aad94","default-catalog":"data_warehouse","default-schema":"bronze"}}}
