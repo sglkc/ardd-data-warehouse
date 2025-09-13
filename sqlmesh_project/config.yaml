@@ -1,0 +1,65 @@
+# --- Gateway Connection ---
+gateways:
+  postgres:
+    connection:
+      # For more information on configuring the connection to your execution engine, visit:
+      # https://sqlmesh.readthedocs.io/en/stable/reference/configuration/#connection
+      # https://sqlmesh.readthedocs.io/en/stable/integrations/engines/postgres/#connection-options
+      type: postgres
+      host: {{ env_var('POSTGRES_HOST') }}
+      user: {{ env_var('POSTGRES_USER') }}
+      password: {{ env_var('POSTGRES_PASSWORD') }}
+      port: {{ env_var('POSTGRES_PORT') }}
+      database: {{ env_var('POSTGRES_DB') }}
+      # concurrent_tasks: 4
+      # register_comments: True
+      # pre_ping: True
+      # pretty_sql: False
+      # schema_differ_overrides:
+      # keepalives_idle:
+      # connect_timeout: 10
+      # role:
+      # sslmode:
+      # application_name:
+
+default_gateway: postgres
+
+# --- Model Defaults ---
+# https://sqlmesh.readthedocs.io/en/stable/reference/model_configuration/#model-defaults
+
+model_defaults:
+  dialect: postgres
+  start: 2025-09-09 # Start date for backfill history
+  cron: '@daily'    # Run models daily at 12am UTC (can override per model)
+
+# --- Linting Rules ---
+# Enforce standards for your team
+# https://sqlmesh.readthedocs.io/en/stable/guides/linter/
+
+linter:
+  enabled: true
+  rules:
+    - ambiguousorinvalidcolumn
+    - invalidselectstarexpansion
+
+# FLOW: Minimal prompts, automatic changes, summary output
+# https://sqlmesh.readthedocs.io/en/stable/reference/configuration/#plan
+
+plan:
+  no_diff: true             # Hide detailed text differences for changed models
+  no_prompts: true          # No interactive prompts
+  auto_apply: true          # Apply changes automatically
+
+# --- Optional: Set a default target environment ---
+# This is intended for local development to prevent users from accidentally applying plans to the prod environment.
+# It is a development only config and should NOT be committed to your git repo.
+# https://sqlmesh.readthedocs.io/en/stable/guides/configuration/#default-target-environment
+
+# Uncomment the following line to use a default target environment derived from the logged in user's name.
+# default_target_environment: dev_{{ user() }}
+
+# Example usage:
+# sqlmesh plan            # Automatically resolves to: sqlmesh plan dev_yourname
+# sqlmesh plan prod       # Specify `prod` to apply changes to production
+
+disable_anonymized_analytics: true
