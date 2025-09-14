@@ -37,6 +37,7 @@ services:
     image: postgres:latest
     container_name: ${PROJECT_NAME}_metabase_postgres
     hostname: postgres
+    restart: unless-stopped
     volumes:
       - metabase_data:/var/lib/postgresql/data
     environment:

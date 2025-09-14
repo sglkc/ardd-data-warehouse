@@ -155,7 +155,39 @@ If you use the database locally, you must replace `localhost` with `host.docker.
 <details>
   <summary>Setup PostgreSQL data warehouse in Metabase</summary>
 
-  ![Metabase PostgreSQL setup](./docs/metabase.webp)
+  ![Metabase PostgreSQL setup](./docs/metabase-setup.webp)
+
+</details>
+
+#### Refreshing Metabase Data
+
+If you have ran Metabase before executing the data pipeline, you would probably need to refresh the database schema and field values.
+
+To do this, head to: http://localhost:3000/admin/databases/
+
+<details>
+  <summary>Refresh data warehouse in Metabase</summary>
+
+  ![Refresh data warehouse in Metabase](./docs/metabase-refresh.webp)
+
+</details>
+
+#### Adding custom maps to Metabase
+
+Metabase by default only ship with [US and World map](https://www.metabase.com/docs/latest/questions/visualizations/map).
+
+To add Australian regions to the map visualization:
+
+- Head to http://localhost:3000/admin/settings/maps
+- Click on `Add a map`
+- Name the map "Australian Local Government Area" with the URL
+https://raw.githubusercontent.com/sglkc/ardd-data-warehouse/refs/heads/master/docs/geojson/LGA_2021_AUST_GDA94.json
+- Then follow the image below.
+
+<details>
+  <summary>Loading custom maps in Metabase</summary>
+
+  ![Loading custom maps in Metabase](./docs/metabase-maps.webp)
 
 </details>
 
