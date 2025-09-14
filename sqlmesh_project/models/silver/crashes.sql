@@ -53,7 +53,7 @@ SELECT
   -->> crash details
 	crash_type AS crash_type,
 	speed_limit AS speed_limit,
-	national_road_type AS national_road_type,
+	national_road_type AS road_type,
 
   -->> location dimension
   state AS state,
