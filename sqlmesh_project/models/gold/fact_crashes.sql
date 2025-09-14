@@ -1,6 +1,6 @@
 MODEL (
   name gold.fact_crashes,
-  kind VIEW,
+  kind FULL,
 );
 
 WITH fatality_counts AS (

@@ -1,6 +1,6 @@
 MODEL (
   name gold.dim_vehicle_involvements,
-  kind VIEW,
+  kind FULL,
 );
 
 SELECT DISTINCT

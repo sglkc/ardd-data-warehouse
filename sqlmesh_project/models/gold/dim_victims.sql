@@ -1,6 +1,6 @@
 MODEL (
   name gold.dim_victims,
-  kind VIEW,
+  kind FULL,
 );
 
 SELECT DISTINCT

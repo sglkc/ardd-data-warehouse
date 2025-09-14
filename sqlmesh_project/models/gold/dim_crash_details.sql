@@ -1,6 +1,6 @@
 MODEL (
   name gold.dim_crash_details,
-  kind VIEW,
+  kind FULL,
 );
 
 SELECT DISTINCT

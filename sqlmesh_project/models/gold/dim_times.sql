@@ -1,6 +1,6 @@
 MODEL (
   name gold.dim_times,
-  kind VIEW,
+  kind FULL,
   grain [hour_24, minute_num]
 );
 

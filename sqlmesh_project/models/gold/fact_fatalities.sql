@@ -1,6 +1,6 @@
 MODEL (
   name gold.fact_fatalities,
-  kind VIEW,
+  kind FULL,
 );
 
 SELECT

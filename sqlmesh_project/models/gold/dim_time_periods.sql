@@ -1,6 +1,6 @@
 MODEL (
   name gold.dim_time_periods,
-  kind VIEW,
+  kind FULL,
   grain [time_period_key]
 );
 
