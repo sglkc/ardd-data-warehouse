@@ -10,7 +10,7 @@ SELECT
   cd.crash_detail_key,
   l.location_key,
   vi.vehicle_involvement_key,
-  p.person_key
+  v.victim_key
 FROM silver.fatalities f
 LEFT JOIN gold.dim_time_periods tp
   ON tp.year = f.year AND tp.month_num = f.month AND tp.day_of_week_name = f.dayweek
@@ -22,5 +22,5 @@ LEFT JOIN gold.dim_locations l
   ON l.location_key = @GENERATE_SURROGATE_KEY(f.state, f.remoteness_area, f.statistical_area, f.local_government_area)
 LEFT JOIN gold.dim_vehicle_involvements vi
   ON vi.vehicle_involvement_key = @GENERATE_SURROGATE_KEY(f.bus_involvement, f.heavy_rigid_truck_involvement, f.articulated_truck_involvement)
-LEFT JOIN gold.dim_person p
-  ON p.person_key = @GENERATE_SURROGATE_KEY(f.road_user, f.age, f.gender)
+LEFT JOIN gold.dim_victims v
+  ON v.victim_key = @GENERATE_SURROGATE_KEY(f.road_user, f.age, f.gender)

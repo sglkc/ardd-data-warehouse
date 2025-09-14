@@ -61,7 +61,7 @@ SELECT
 	sa4_name_2021 AS statistical_area,
 	national_lga_name_2021 AS local_government_area,
 
-  -->> person dimension
+  -->> victim dimension
   road_user AS road_user,
 
   -- Set unknonwn age to NULL
