@@ -13,6 +13,7 @@ SELECT
   LPAD((minute_of_day / 60)::text, 2, '0') ||
     LPAD((minute_of_day % 60)::text, 2, '0') AS time_key,   -- 'HHMM' format surrogate key
 
+  ('00:00'::TIME + (minute_of_day * INTERVAL '1 minute'))::TIME AS full_time,
   (minute_of_day / 60) % 12 AS hour_12,
   (minute_of_day / 60)      AS hour_24,
   (minute_of_day % 60)      AS minute_num,
