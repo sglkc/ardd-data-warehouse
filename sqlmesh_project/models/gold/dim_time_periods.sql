@@ -13,7 +13,7 @@ WITH dates AS (
   ) AS full_date
 )
 
-SELECT
+SELECT DISTINCT
   -- surrogate key
   TO_CHAR(full_date, 'YYYYMMD') AS time_period_key,
 
@@ -21,9 +21,9 @@ SELECT
   TO_CHAR(full_date, 'YYYY-MM') AS year_month,
   EXTRACT(YEAR FROM full_date) AS year,
   EXTRACT(MONTH FROM full_date) AS month_num,
-  TO_CHAR(full_date, 'Month') AS month_name,
-  EXTRACT(DOW FROM full_date) AS day_of_week_num,
-  TO_CHAR(full_date, 'Day') AS day_of_week_name,
+  TRIM(TO_CHAR(full_date, 'Month')) AS month_name,
+  EXTRACT(DOW FROM full_date)+1 AS day_of_week_num,
+  TRIM(TO_CHAR(full_date, 'Day')) AS day_of_week_name,
 
   -- higher-level groupings
   EXTRACT(QUARTER FROM full_date) AS quarter_num,
