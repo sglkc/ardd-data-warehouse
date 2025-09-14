@@ -4,9 +4,14 @@ MODEL (
 );
 
 SELECT DISTINCT
-  @GENERATE_SURROGATE_KEY(c.state, c.remoteness_area, c.statistical_area, c.local_government_area) AS location_key,
-  c.state,
-  c.remoteness_area,
-  c.statistical_area,
-  c.local_government_area
-FROM silver.crashes c
+  @GENERATE_SURROGATE_KEY(
+    f.state,
+    f.remoteness_area,
+    f.statistical_area,
+    f.local_government_area
+  ) AS location_key,
+  f.state,
+  f.remoteness_area,
+  f.statistical_area,
+  f.local_government_area
+FROM silver.fatalities f

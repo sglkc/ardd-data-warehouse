@@ -5,11 +5,11 @@ MODEL (
 
 SELECT DISTINCT
   @GENERATE_SURROGATE_KEY(
-    c.bus_involvement,
-    c.heavy_rigid_truck_involvement,
-    c.articulated_truck_involvement
+    f.bus_involvement,
+    f.heavy_rigid_truck_involvement,
+    f.articulated_truck_involvement
   ) AS vehicle_involvement_key,
-  c.bus_involvement AS bus,
-	c.heavy_rigid_truck_involvement AS heavy_rigid_truck,
-	c.articulated_truck_involvement AS articulated_truck
-FROM silver.crashes c;
+  f.bus_involvement AS bus,
+	f.heavy_rigid_truck_involvement AS heavy_rigid_truck,
+	f.articulated_truck_involvement AS articulated_truck
+FROM silver.fatalities f;

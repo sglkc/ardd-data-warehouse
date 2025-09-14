@@ -9,4 +9,3 @@ SELECT DISTINCT
   f.age,
   f.gender
 FROM silver.fatalities f
-LEFT JOIN silver.crashes c ON c.crash_id = f.crash_id;
