@@ -29,7 +29,7 @@ default_gateway: postgres
 
 model_defaults:
   dialect: postgres
-  start: 2025-09-09 # Start date for backfill history
+  start: 1989-01-01 # Start date for backfill history
   cron: '@daily'    # Run models daily at 12am UTC (can override per model)
 
 # --- Linting Rules ---
@@ -46,7 +46,7 @@ linter:
 # https://sqlmesh.readthedocs.io/en/stable/reference/configuration/#plan
 
 plan:
-  no_diff: true             # Hide detailed text differences for changed models
+  # no_diff: true             # Hide detailed text differences for changed models
   no_prompts: true          # No interactive prompts
   auto_apply: true          # Apply changes automatically
 
