@@ -134,6 +134,7 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "pandas-stubs" },
+    { name = "psycopg2-binary" },
 ]
 
 [package.metadata]
@@ -145,7 +146,10 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pandas-stubs", specifier = ">=2.3.2.250827" }]
+dev = [
+    { name = "pandas-stubs", specifier = ">=2.3.2.250827" },
+    { name = "psycopg2-binary", specifier = ">=2.9.10" },
+]
 
 [[package]]
 name = "dateparser"

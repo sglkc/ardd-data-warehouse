@@ -14,6 +14,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     "pandas-stubs>=2.3.2.250827",
+    "psycopg2-binary>=2.9.10",
 ]
 
 [tool.pyright]

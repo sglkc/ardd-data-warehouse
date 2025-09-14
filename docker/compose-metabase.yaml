@@ -10,7 +10,7 @@ services:
     volumes:
       - /dev/urandom:/dev/random:ro
     ports:
-      - 3000:3000
+      - ${METABASE_PORT}:3000
     environment:
       MB_DB_TYPE: postgres
       MB_DB_DBNAME: metabaseappdb

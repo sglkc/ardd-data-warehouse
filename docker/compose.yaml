@@ -11,7 +11,7 @@ services:
     hostname: postgres
     restart: unless-stopped
     ports:
-      - 5432:${POSTGRES_PORT}
+      - ${POSTGRES_PORT}:5432
     volumes:
       - pgsql_data:/var/lib/postgresql/data
     environment:
@@ -32,7 +32,7 @@ services:
     container_name: ${PROJECT_NAME}_pgweb
     restart: always
     ports:
-      - 54321:${PGWEB_PORT}
+      - ${PGWEB_PORT}:54321
     environment:
       PGWEB_DATABASE_URL: "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@pgsql:5432/${POSTGRES_DB}?sslmode=disable"
     depends_on:
