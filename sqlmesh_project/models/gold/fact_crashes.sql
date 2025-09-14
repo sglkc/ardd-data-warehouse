@@ -10,6 +10,7 @@ WITH fatality_counts AS (
 )
 
 SELECT
+  DISTINCT ON (f.crash_id) -- this fact table represents a single crash
   f.crash_id AS source_id,
   tp.time_period_key,
   t.time_key,
