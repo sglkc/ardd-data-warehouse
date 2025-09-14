@@ -12,6 +12,13 @@ The dataset for this project are gathered from the Australian Road Deaths Databa
 
 https://datahub.roadsafety.gov.au/progress-reporting/monthly-road-deaths
 
+The GeoJSON data for map visualization in Metabase are downloaded from:
+
+https://csse-uwa.gitbook.io/data-warehouse-project-1-s1-2025#data-sources
+
+with 0.05% Visvalingam simplification to minify the file size via
+https://mapshaper.org/
+
 ## Project Overview
 
 ### Data Architecture
