@@ -13,11 +13,12 @@ WITH dates AS (
   ) AS full_date
 )
 
-SELECT DISTINCT
+SELECT DISTINCT ON (TO_CHAR(full_date, 'YYYYMMD'))
   -- surrogate key
   TO_CHAR(full_date, 'YYYYMMD') AS time_period_key,
 
   -- basic date parts
+  full_date::date AS full_date,
   TO_CHAR(full_date, 'YYYY-MM') AS year_month,
   EXTRACT(YEAR FROM full_date) AS year,
   EXTRACT(MONTH FROM full_date) AS month_num,
