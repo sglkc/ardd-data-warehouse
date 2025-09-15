@@ -2,6 +2,20 @@
 
 Internship final project for data warehouse to visualize the Australian Road Deaths Database (ARDD). The project practices task management, data analysis, ETL (extract, transform, load) process, data architect, and probably some CI/CD & DevOps.
 
+## Demonstration
+
+For quick access to the data warehouse, it is currently hosted to a VPS. Plz dont abuse thxx.
+Should you find not able to log in, it means that I've changed the credentials and you are out of luck.
+
+<details>
+  <summary>Demo Metabase</summary>
+
+- URL: https://metabase.seya.zip
+- Email: viewer@metabase.seya.zip
+- Password: 6zqbzADTBoRFfM
+
+</details>
+
 ## Source Data
 
 The project references a data warehouse project from The University of Western Australia:
@@ -209,6 +223,14 @@ To apply model changes to the data warehouse, run the following script:
 
 ```
 ./sqlmesh.sh
+```
+
+## Troubleshooting
+
+If you encountered `Failed to build psycopg2==2.9.10` on uv sync, you must install the libpq library to build it.
+
+```sh
+sudo apt-get install libpq-dev
 ```
 
 ## Expanding the project
